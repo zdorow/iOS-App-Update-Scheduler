@@ -19,6 +19,6 @@ To run the program please download the .pkg and run the installer. It will get i
 
 Happy Scheduling! 
 
-Source code can be found here [Bryan's Page](https://github.com/blarson007/app-update-scheduler) and here [Zach's Page](https://github.com/zdorow/app-update-scheduler)
+Source code can be found on [Bryan's Page](https://github.com/blarson007/app-update-scheduler) and [Zach's Page](https://github.com/zdorow/app-update-scheduler) and also in the Resources folder of this Repo.
 
 [MIT license](https://github.com/zdorow/iOS-App-Update-Scheduler/blob/master/Resources/LICENSE)
