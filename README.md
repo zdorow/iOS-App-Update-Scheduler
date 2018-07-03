@@ -1,4 +1,4 @@
-## ![logo](Resources/update.png)iOS Application Update Scheduler for Jamf|PRO Version 1.0
+## ![logo](Resources/update.png)iOS Application Update Scheduler Version 1.0 for Jamf|PRO
 
 Welcome to the iOS Application Update Scheduler Page! This is a Java application that uses the Jamf PRO Classic API to divide up iOS application updates over a selected period of time. This will help spread the load on a Jamf PRO server that is put on by applications all trying to update at once. 
 
