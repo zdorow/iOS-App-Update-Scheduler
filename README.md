@@ -5,9 +5,12 @@ Welcome to the iOS Applicaiton Update Scheduler Page! This is a Java application
 Requirements:
 
  1. Java SE Development Kit 8:  [MacOS Java Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
- 2. Global App updates turned off in Jamf Pro and turned on for all the apps we want to have auto-updates turned on for. 
+ 2. Global App updates turned off in Jamf Pro and turned on for all the apps we want to have auto-updates turned on for.
  
- **To be added soon are scripts to help turning on and off auto-app updates for iOS apps. 
+ This is the global setting we need disabled to turn on at the individual level. This setting is not accessible via the API: 
+ ![alt text](Resources/Yes.png)
+ 
+ **To be added soon are scripts to help turning on and off auto-app updates for iOS apps on the individual level. 
  
 To run the program please download the .pkg and run the installer. It will get installed to the Applications folder and can be run from there.
 
