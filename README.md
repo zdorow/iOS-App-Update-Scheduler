@@ -1,14 +1,15 @@
 ## ![logo](Resources/update.png)iOS Application Update Scheduler for Jamf|PRO
 
-Welcome to the iOS Applicaiton Update Scheduler Page! This is a Java application that uses the Jamf PRO Classic API to divide up iOS application updates over a selected period of time. This will help spread the load on a Jamf PRO server that is put on but applications all updating at once. 
+Welcome to the iOS Applicaiton Update Scheduler Page! This is a Java application that uses the Jamf PRO Classic API to divide up iOS application updates over a selected period of time. This will help spread the load on a Jamf PRO server that is put on by applications all trying to update at once. 
 
 Requirements:
 
  1. Java SE Development Kit 8:  [MacOS Java Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  2. Global App updates turned off in Jamf Pro and turned on for all the apps we want to have auto-updates turned on for.
  
- This is the global setting we need disabled to turn on at the individual level. This setting is not accessible via the API: 
- ![alt text](Resources/Yes.png)
+ This is the global setting we need disabled to turn on annd schedule updates at the individual app level. This setting is not accessible via the API:
+ 
+![alt text](Resources/Yes.png)
  
  **To be added soon are scripts to help turning on and off auto-app updates for iOS apps on the individual level. 
  
