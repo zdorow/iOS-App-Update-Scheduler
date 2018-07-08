@@ -11,7 +11,7 @@ Requirements:
  
 ![alt text](Resources/Yes.png)
  
- **If this it the first time setup we might want to use the Setup Script [Setup Script Download](Resources/AppUpdateSetup.sh) the setup script has the option to download the .pkg
+***If this it the first time setup it is recommended to use the Bash [Setup Script.](Resources/AppUpdateSetup.sh) This setup script has the option to download the .pkg when it is run and checks all the apps to make sure app updates are turned on at the individual level.***
  
 To run the program please download the .pkg and run the installer or run the setup script. It will get installed to the Applications folder and can be run from there.
 
@@ -25,6 +25,7 @@ ________________________________________________________________________________
 
 FUTURE PLANS: Add support for MacOS apps, integrate the functions of the scripts into the app, add the ability to turn on and off from .csv and a script to get the apps that are affected by PI-003112.
 
+Any ideas or suggestions are welcomed! 
 
 Source code can be found on [Bryan's Page](https://github.com/blarson007/app-update-scheduler) and [Zach's Page](https://github.com/zdorow/app-update-scheduler) and also in the Resources folder of this Repo.
 
