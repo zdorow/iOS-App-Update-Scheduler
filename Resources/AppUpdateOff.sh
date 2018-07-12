@@ -6,7 +6,6 @@ until [ $status -eq 0 ]; do
 echo ""
 echo "Please enter the Jamf Pro API username: "
 read apiUser
-apiUser="admin"
 echo ""
 #Password Entry 
 echo "Please enter the password: "
