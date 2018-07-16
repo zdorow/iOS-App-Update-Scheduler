@@ -6,7 +6,7 @@ This is a Java application that uses the Jamf PRO Classic API to divide up iOS a
 
 ***Who is this for?***
 
-This is for small to medium sized customers. If we run this program and we are still seeing issues we might end up turning auto-app updates off until the larger issues are resolved. Admins who use iPad carts will likely be happier with an [Apple Configurator 2 workflow.](https://help.apple.com/configurator/mac/2.7.1/#/cad789a3f0bd)
+This is for small to medium sized customers (number of apps that are scoped out times the number of iPads). If we run this program and we are still seeing issues we might end up turning auto-app updates off until the larger issues are resolved. Admins who use iPad carts will likely be happier with an [Apple Configurator 2 workflow.](https://help.apple.com/configurator/mac/2.7.1/#/cad789a3f0bd) If we are unsure what our scoping looks like and we would like to know, check out my other project [TheScopeReport!](https://zdorow.github.io/TheScopeReport/)
 
 Requirements:
 
