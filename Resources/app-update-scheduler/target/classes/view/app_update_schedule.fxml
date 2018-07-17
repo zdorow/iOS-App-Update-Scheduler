@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<VBox fx:controller="com.app.update.scheduler.controller.AppUpdateController" style=" -fx-font-size: 11pt;" xmlns:fx="http://javafx.com/fxml" alignment="top_center" styleClass="root" >
+	<VBox spacing="10" alignment="bottom_center" styleClass="text, h4">
+		<TextFlow fx:id="actiontargetPane" styleClass="alert, alert-success" textAlignment="center">
+			<Text fx:id="actiontarget" text=" Welcome to the App Scheduler! " textAlignment="center"/>          
+		</TextFlow>
+	</VBox>
+    <GridPane hgap="10" vgap="10" >
+        
+	<padding><Insets top="0" right="25" bottom="10" left="25"/></padding>
+	
+	    <Label text="Jamf Pro Server URL:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="lbl, lbl-default" style="-fx-font-size: 11pt;" prefHeight="25" prefWidth="175.0"/>
+	    <TextField fx:id="jamfProServerUrl" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-font-size: 11pt;"/>
+	 
+	    <Label text="Jamf Pro Username: " GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="lbl, lbl-default" style="-fx-font-size: 11pt;" prefHeight="25" prefWidth="175.0"/>
+	    <TextField fx:id="userName" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-font-size: 11pt;"/>
+	    
+        <Label text="Username Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="lbl, lbl-default" style="-fx-font-size: 11pt;" prefHeight="25" prefWidth="175.0"/>
+	    <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="3" style="-fx-font-size: 11pt;"/>
+	 
+	    <Label text="Scheduling Option:   " GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="lbl, lbl-default" style="-fx-font-size: 11pt;" prefHeight="25" prefWidth="175.0"/>
+	    <ComboBox fx:id="appSchedulerOptions" GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="text,  text-default" style="-fx-font-size: 11pt;" prefHeight="30" prefWidth="330">
+	    	<items>
+	        	<FXCollections fx:factory="observableArrayList"></FXCollections>
+			</items>
+	    </ComboBox>
+	    
+		<Label text="Schedule Timeframe:" fx:id="timeFrameLabel"  GridPane.columnIndex="0" GridPane.rowIndex="5" disable="false" styleClass="lbl, lbl-default" style="-fx-font-size: 11pt;" prefHeight="25" prefWidth="175.0"/>
+	    <HBox fx:id="timeFrameOptions" GridPane.columnIndex="1" GridPane.rowIndex="5" alignment="center" disable="false" styleClass="split-menu-btn, split-menu-btn-primary" >
+	    	<ComboBox fx:id="timeFrameStartOptions" promptText="Choose One" styleClass="text,  text-default" prefHeight="30" prefWidth="155.0">
+		    	<items>
+		    		<FXCollections fx:factory="observableArrayList"></FXCollections>
+		    	</items>
+		    </ComboBox>
+		    <Text text=" to "/>
+		    <ComboBox fx:id="timeFrameEndOptions" promptText="Choose One" styleClass="text, text-default" prefHeight="30" prefWidth="155.0">
+		    	<items>
+		    		<FXCollections fx:factory="observableArrayList"></FXCollections>
+		    	</items>
+		    </ComboBox>
+	    </HBox>
+	</GridPane>
+    <VBox spacing="10" alignment="bottom_center">
+        <Button fx:id="button" text="Update Apps" disable="false" onAction="#handleSubmitButtonAction" styleClass="btn, btn-primary" />
+        <ProgressBar fx:id="progressBar" layoutX="54.0" layoutY="103.0" prefHeight="36.0" prefWidth="200.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" visible="false" styleClass="progress-bar-primary" style=" -fx-border-color: white; -fx-background-color: white; -fx-border-style: solid outside;"/>
+	</VBox>
+</VBox>
