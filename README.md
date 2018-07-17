@@ -1,6 +1,6 @@
-## ![logo](Resources/update.png)iOS Application Update Scheduler Version 1.0 for Jamf|PRO
+## ![logo](Resources/update.png)iOS Application Update Scheduler Version 1.2 for Jamf|PRO
 
-Welcome to the iOS Application Update Scheduler Page! Where we are trying to save auto-app updates!
+Welcome to the iOS Application Update Scheduler Page! Where we are trying to save auto-app updates! Now with a nicer interface!
 
 This is a Java application that uses the Jamf PRO Classic API to divide up iOS application updates over a selected period of time. This will help spread the load on a Jamf PRO server that is put on by applications all trying to update at once. It will only schedule the apps that have updates turned on at the individual level. 
 
@@ -34,7 +34,6 @@ FUTURE PLANS:
 
  - Add support for MacOS apps
  - Integrate the functions of the scripts into the app.
- - Fancy interface updates coming soon!
 
 Any ideas or suggestions are welcomed! 
 
