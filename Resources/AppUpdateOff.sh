@@ -117,6 +117,6 @@ fi
 done
 
 echo ""
-echo "App updates have been turned on for indvidual apps."
+echo "App updates have been turned off for indvidual apps."
 echo ""
 exit 0
