@@ -6,7 +6,7 @@
 	<groupId>com.app.update.scheduler</groupId>
 	<artifactId>app-update-scheduler</artifactId>
          <packaging>jar</packaging>
-	<version>0.0.1</version>
+	<version>1.2.1</version>
 	
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>

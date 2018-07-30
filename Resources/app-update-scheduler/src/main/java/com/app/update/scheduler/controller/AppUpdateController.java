@@ -77,11 +77,10 @@ public class AppUpdateController implements Initializable {
 		}
 		
 		// Clear any existing text, disable the button and activate the progress bar
-//		actiontarget.setText("");
-                appUpdateForm.getActiontargetPane().getStyleClass().clear();
-                appUpdateForm.getActiontargetPane().getStyleClass().add("alert");
-		appUpdateForm.getActiontargetPane().getStyleClass().add("alert-success");
-		appUpdateForm.getActiontarget().setText("");
+		actiontargetPane.getStyleClass().clear();
+		actiontargetPane.getStyleClass().add("alert");
+		actiontargetPane.getStyleClass().add("alert-success");
+		actiontarget.setText("");
 		button.setDisable(true);
 		progressBar.setVisible(true);
 		

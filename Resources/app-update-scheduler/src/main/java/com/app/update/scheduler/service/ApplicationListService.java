@@ -37,7 +37,7 @@ public class ApplicationListService extends Service<List<Integer>> {
 			new TimeFrameSchedulerService(jssApi, appIdList, actiontarget, timeFrameStartOptions, timeFrameEndOptions, schedulerOption, progressBar, button, appUpdateForm).start();
 		});
 		
-		applicationListGet.setOnFailed(new JssApiResponseHandler(jssApi, actiontarget, button, appUpdateForm));
+		applicationListGet.setOnFailed(new JssApiResponseHandler(jssApi, appUpdateForm));
 	}
 
 	@Override
@@ -48,5 +48,4 @@ public class ApplicationListService extends Service<List<Integer>> {
 	public ApplicationListGet getApplicationListGet() {
 		return applicationListGet;
 	}
-	
 }

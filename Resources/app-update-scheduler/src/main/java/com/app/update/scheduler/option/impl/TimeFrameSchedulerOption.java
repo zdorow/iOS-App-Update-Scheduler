@@ -34,13 +34,51 @@ public class TimeFrameSchedulerOption extends Task<Boolean> {
 
 		try {
 			int count=0;
+			double spreadBeforeMidnight, spreadAfterMidnight;
 			double startTime = timeFrameStart.calculateNumberOfSecondsFromMidnight();
+                        double timeUntilMidnight = 86400 - startTime;
 			double endTime = timeFrameEnd.calculateNumberOfSecondsFromMidnight();
-
-			double spread = endTime / new Double(appIdList.size());
-
 			actiontarget.setText("Updating application update schedules");
+			
+			if(endTime < startTime)
+			{
+			System.out.println("Endtime less than start detected. Running compensation sequence");
+			double midnight=0.0;
+                        double calcualtePercentageList = timeUntilMidnight / 86400;
+                        System.out.println("Percentage of list to be allocated before midnight" + calcualtePercentageList * 100);
+			double percentListTotal=(Math.round(appIdList.size() * calcualtePercentageList));
 
+			List<Integer> appIdListBeforeMidnight = appIdList.subList(0, (int)percentListTotal);
+			List<Integer> appIdListAfterMidnight = appIdList.subList((int)percentListTotal, appIdList.size());
+			
+			spreadBeforeMidnight = timeUntilMidnight / new Double(appIdListBeforeMidnight.size());
+			spreadAfterMidnight = endTime / new Double(appIdListAfterMidnight.size());
+			
+			for (int id : appIdListBeforeMidnight) {
+				jssApi.put("mobiledeviceapplications/id/" + id, String.format(updateXml, Math.round(startTime)));
+                                System.out.println("Spread Before midnight:" + spreadBeforeMidnight);
+                                System.out.println("Start Time:" + startTime);
+				updateProgress(count, appIdListBeforeMidnight.size());
+				count++;
+				startTime += spreadBeforeMidnight;
+				Double percent = (double) count/appIdListBeforeMidnight.size()*100;
+				actiontarget.setText("Updating applications that run before midnight. " + percent.intValue() + "%");
+			}
+			count=0;
+			for (int id : appIdListAfterMidnight) {
+				jssApi.put("mobiledeviceapplications/id/" + id, String.format(updateXml, Math.round(midnight)));
+
+				updateProgress(count, appIdListAfterMidnight.size());
+				count++;
+				midnight += spreadAfterMidnight;
+				Double percent = (double) count/appIdListAfterMidnight.size()*100;
+				actiontarget.setText("Updating applications that run after midnight. " + percent.intValue() + "%");
+			}
+			}
+			
+			else {
+			double spread = endTime / new Double(appIdList.size());
+			
 			for (int id : appIdList) {
 				jssApi.put("mobiledeviceapplications/id/" + id, String.format(updateXml, Math.round(startTime)));
 
@@ -48,8 +86,9 @@ public class TimeFrameSchedulerOption extends Task<Boolean> {
 				count++;
 				startTime += spread;
 				Double percent = (double) count/appIdList.size()*100;
-				actiontarget.setText( percent.intValue() + "%");
+				actiontarget.setText(percent.intValue() + "%");
 			}
+		}
 			updateProgress(1, 1);
 			appIdList.clear();
 		} catch (JssApiException e) {

@@ -1,0 +1,16 @@
+target
+target/**
+dependency-reduced-pom.xml
+.idea
+.idea/**
+*.iml
+.classpath
+.project
+.settings
+.settings/**
+target
+target/**
+tomcat*/**
+catalina.out*
+/nbactions.xml
+bin/**
