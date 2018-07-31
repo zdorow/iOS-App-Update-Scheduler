@@ -33,19 +33,20 @@ public class TimeFrameSchedulerOption extends Task<Boolean> {
 		actiontarget.setText("Calculating spread of application updates");
 
 		try {
-			int count=0;
+			int count = 0;
 			double spreadBeforeMidnight, spreadAfterMidnight;
 			double startTime = timeFrameStart.calculateNumberOfSecondsFromMidnight();
-                        double timeUntilMidnight = 86400 - startTime;
 			double endTime = timeFrameEnd.calculateNumberOfSecondsFromMidnight();
 			actiontarget.setText("Updating application update schedules");
 			
 			if(endTime < startTime)
 			{
 			System.out.println("Endtime less than start detected. Running compensation sequence");
-			double midnight=0.0;
-                        double calcualtePercentageList = timeUntilMidnight / 86400;
-                        System.out.println("Percentage of list to be allocated before midnight" + calcualtePercentageList * 100);
+			double midnight = 0.0;
+                        double timeUntilMidnight = 86400 - startTime;
+                        System.out.println(startTime);
+                        double calcualtePercentageList = timeUntilMidnight / (timeUntilMidnight + endTime);
+                        System.out.println("Percentage of list to be allocated before midnight " + calcualtePercentageList * 100);
 			double percentListTotal=(Math.round(appIdList.size() * calcualtePercentageList));
 
 			List<Integer> appIdListBeforeMidnight = appIdList.subList(0, (int)percentListTotal);
@@ -98,4 +99,5 @@ public class TimeFrameSchedulerOption extends Task<Boolean> {
 
 		return true;
 	}
+        
 }
