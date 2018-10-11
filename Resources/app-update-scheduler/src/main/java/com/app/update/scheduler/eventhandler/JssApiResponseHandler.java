@@ -32,13 +32,13 @@ public class JssApiResponseHandler implements EventHandler<WorkerStateEvent> {
 		case 0:
 			markError("URL was not found.");
 			break;
-        case 403:
+        	case 403:
 			markError("Please check your hostname.");
 			break;
-       case 404:
+	       case 404:
 			markError("Please check the port number. For locally hosted we need :8443");
 			break;
-       case 200: 
+      	       case 200: 
             markError("No app updates are enabled at the individual level.");
             break;
 		default:                       
