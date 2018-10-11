@@ -26,21 +26,21 @@ public class JssApiResponseHandler implements EventHandler<WorkerStateEvent> {
 	@Override
 	public void handle(WorkerStateEvent event) {
 		switch (jssApi.getLastResponseCode()) {
-		case 401:
-			markError("Username and/or password not accepted.");
-			break;
 		case 0:
 			markError("URL was not found.");
+			break;
+		case 401:
+			markError("Username and/or password not accepted.");
 			break;
         	case 403:
 			markError("Please check your hostname.");
 			break;
-	       case 404:
+	        case 404:
 			markError("Please check the port number. For locally hosted we need :8443");
 			break;
-      	       case 200: 
-            markError("No app updates are enabled at the individual level.");
-            break;
+      	        case 200: 
+            		markError("No app updates are enabled at the individual level.");
+            		break;
 		default:                       
 			markError("Please file an issue on Github. Last API response code: " + jssApi.getLastResponseCode());
 			System.out.println("This is the last API response code: " + jssApi.getLastResponseCode());
