@@ -26,7 +26,7 @@ To run the program please download the .pkg and run the installer or run the set
 
 Happy Scheduling! 
 
-If we would like to turn off app updates for all iOS apps this script here will do the trick: [Turn OFF Updates Script](Resources/AppUpdateOff.sh)
+If we would like to turn off app updates for all iOS apps this script here will do the trick: [Turn OFF Updates Script](Resources/AppUpdateOff.sh) Also, post 10.7 there are more options so here is the new script for that [Turn OFF Updates Script 10.7++](Resources/AppUpdateOff_10_7++.sh)
 
 To check that the program succeeded you can run this script: [Check Updates Script](Resources/AppUpdateTimeCheck.sh)
 
