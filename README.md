@@ -22,6 +22,8 @@ If this it the first time setup we can use the Bash [Setup Script.](Resources/Ap
  
 To run the program please download jar [Jar Download](https://github.com/zdorow/iOS-App-Update-Scheduler/releases/download/1.2/app-update-scheduler-1.2.1-jar-with-dependencies.jar)
 
+Run in terminal or CMD like this: java -jar /path/to/jar/app-update-scheduler-1.2.1-jar-with-dependencies.jar
+
 Happy Scheduling! 
 
 If we would like to turn off app updates for all iOS apps this script here will do the trick: [Turn OFF Updates Script](Resources/AppUpdateOff.sh) Also, post 10.7 there are more options so here is the new script for that [Turn OFF Updates Script 10.7++](Resources/AppUpdateOff_10_7++.sh)
