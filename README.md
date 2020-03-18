@@ -20,9 +20,7 @@ This setting is not accessible via the API, however there are plans to integrate
  
 If this it the first time setup we can use the Bash [Setup Script.](Resources/AppUpdateSetup.sh) This setup script checks all the apps to make sure **ALL** iOS app updates are turned on at the individual level.
  
-To run the program please download jar
-
-[Jar Download](https://github.com/zdorow/iOS-App-Update-Scheduler/releases/download/1.2/app-update-scheduler-1.2.1-jar-with-dependencies.jar)
+To run the program please download jar [Jar Download](https://github.com/zdorow/iOS-App-Update-Scheduler/releases/download/1.2/app-update-scheduler-1.2.1-jar-with-dependencies.jar)
 
 Happy Scheduling! 
 
