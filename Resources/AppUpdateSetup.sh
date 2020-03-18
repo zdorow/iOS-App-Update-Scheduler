@@ -98,35 +98,4 @@ done
 echo ""
 echo "App updates have been turned on for indvidual apps."
 echo ""
-
-echo "Would you like to open the iOS-Application-Scheduler now?"
-echo "Press 1 to open and 2 to quit"
-echo "If 1 is selected and the .app is not installed, it will be downloaded to the Desktop."
-read appLaunch
-
-if [[ "appLaunch" -eq 2 ]] ; then
-    echo ""
-    echo "Thanks for using the App Scheduler Setup Script!"
-    echo ""
-elif [[ "appLaunch" -eq 1 && ! -d "/Applications/App-Update-Scheduler.app" ]] ; then
-    echo ""
-    echo "We are downloading the .pkg for the App-Update-Scheduler.app to the Desktop..."
-    curl -L -o ~/Desktop/App-Update-Scheduler.pkg https://github.com/zdorow/iOS-App-Update-Scheduler/raw/master/App-Update-Scheduler.pkg
-    echo ""
-    echo "Thanks for using the App Scheduler Setup Script!"
-    echo ""
-    open ~/Desktop/App-Update-Scheduler.pkg
-elif [[ "appLaunch" -eq 1 ]] ; then
-    echo ""
-    echo "Thanks for using the App Scheduler Setup Script!"
-    echo ""
-    open /Applications/App-Update-Scheduler.app
-else
-    echo ""
-    echo "Selection not recognized. Opening Github README webpage for assistance."
-    echo "Thanks for using the App Scheduler Setup Script!"
-    osascript -e 'tell application "Safari" to open location "https://zdorow.github.io/iOS-App-Update-Scheduler/"'
-    echo ""
-fi
-
 exit 0
